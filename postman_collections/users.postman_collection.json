@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "b407fcd9-64e9-473b-8889-a6b82bbc483c",
+		"name": "users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "adding a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "f_name",
+							"value": "user",
+							"type": "default"
+						},
+						{
+							"key": "l_name",
+							"value": "one",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "user@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "default"
+						},
+						{
+							"key": "current",
+							"value": "true",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users?f_name=john&l_name=doe&email=user@gmail.com&password=12345&current=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "f_name",
+							"value": "john"
+						},
+						{
+							"key": "l_name",
+							"value": "doe"
+						},
+						{
+							"key": "email",
+							"value": "user@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "12345"
+						},
+						{
+							"key": "current",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all the users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "f_name",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "l_name",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/auditors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auditors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all auditors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auditors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auditors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adding auditor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "is_active",
+							"value": "true",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/auditors?is_active=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auditors"
+					],
+					"query": [
+						{
+							"key": "is_active",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all audit findings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/audit_findings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"audit_findings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "finding_date",
+							"value": "09/09/2023",
+							"type": "default"
+						},
+						{
+							"key": "target_date",
+							"value": "09/09/2023",
+							"type": "default"
+						},
+						{
+							"key": "date_closed",
+							"value": "09/09/2023",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/audit_findings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"audit_findings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all audit_entities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/audit_entity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"audit_entity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addiing new audit entity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "start_date",
+							"value": "09/09/2023",
+							"type": "default"
+						},
+						{
+							"key": "end_date",
+							"value": "09/09/2023",
+							"type": "default"
+						},
+						{
+							"key": "schedule_date",
+							"value": "09/09/2023",
+							"type": "default"
+						},
+						{
+							"key": "audit_status",
+							"value": "completed",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "this is an audit description",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/audit_entity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"audit_entity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all audit report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/audit_report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"audit_report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adding new report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "impact",
+							"value": "this an impact description",
+							"type": "default"
+						},
+						{
+							"key": "immediate_action",
+							"value": "immediate action description",
+							"type": "default"
+						},
+						{
+							"key": "further_action",
+							"value": "further action description ",
+							"type": "default"
+						},
+						{
+							"key": "CAPA",
+							"value": "capa",
+							"type": "default"
+						},
+						{
+							"key": "notes",
+							"value": "notes",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/audit_report?impact=this is an impact description&immediate_action=immediate action decription&further_action=further action description&CAPA=capa description &notes=notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"audit_report"
+					],
+					"query": [
+						{
+							"key": "impact",
+							"value": "this is an impact description"
+						},
+						{
+							"key": "immediate_action",
+							"value": "immediate action decription"
+						},
+						{
+							"key": "further_action",
+							"value": "further action description"
+						},
+						{
+							"key": "CAPA",
+							"value": "capa description "
+						},
+						{
+							"key": "notes",
+							"value": "notes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all corrective dates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/corrective_dates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"corrective_dates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adding new corrective date",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "target_date",
+							"value": "09/09/2023",
+							"type": "default"
+						},
+						{
+							"key": "date_closed",
+							"value": "09/09/2023",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/corrective_dates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"corrective_dates"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
